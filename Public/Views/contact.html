@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/index.css" rel="stylesheet"></link>
+    <title>Contact Me</title>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+		<a href="education.html">Education</a>
+		<a href="skills.html">Skills and Training</a>
+        <a href="profile.html">Personal Profile</a>
+        <a href="contact.html" class="selected">Contact Me</a>
+    </nav>	
+    <div class="contact-form">
+            <form class="form" onsubmit="getDetails(event)">
+                Name:
+                <input type="text" required placeholder="Enter your name..." id="name"><br>
+                Email ID:
+                <input type="email" required placeholder="Enter your email id..." id="email"><br>
+                Mobile No:
+                <input type="number" required placeholder="Enter your mobile number..." id="phone"><br>
+                Comments:<br><br>
+                <textarea name="textbox" id="text-box" rows="10" column="200">Enter Text here...</textarea><br>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <script>
+                let details=[];
+                function getDetails(event){
+                    event.preventDefault();
+                    let detail={};
+                    let name=document.getElementById("name").value;
+                    let email=document.getElementById("email").value;
+                    let phone=document.getElementById("phone").value;
+
+                    detail.name=name;
+                    detail.email=email;
+                    detail.phone=phone;
+
+                    details.push(detail);
+
+                    document.getElementById("name").value="";
+                    document.getElementById("email").value="";
+                    document.getElementById("phone").value="";
+                                
+                    console.log(details);
+                }
+
+            </script>
+        </div>  
+</body>
+</html>

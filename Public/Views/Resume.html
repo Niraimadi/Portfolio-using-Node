@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/resume.css" rel="stylesheet"></link>
+    <title>Resume</title>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills and Training</a>
+        <a href="#profile">Personal Profile</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+    <div class="Home" id="Home">
+        <div class="about">
+            <img src="../Images/mypic.jpg" alt="My Pic">
+            <div class="details">
+                <h1 class="details-ele">About</h1>
+                <h3 class="details-ele">A few lines about me</h3>
+                <p  class="details-ele">I am S.Niraimadi, currently pursuing BE degree in the stream of Electronics and Communication Engineering at Sri Venkateswara College of Engineering, Sriperumbudur.</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="footer">
+        <nav>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills and Training</a>
+            <a href="#profile">Personal Profile</a>
+            <a href="#contact">Contact Me</a>
+        </nav>	
+    </div> -->
+    <div class="education" id="education">
+        <table class="table" border="1" cellspacing="0">
+            <h3>ACADEMIC RECORD</h3>
+            <thead>
+                <tr>
+                    <th>COURSE/MAJOR</th>
+                    <th>NAME OF THE INSTITUTION</th>
+                    <th>YEAR OF PASSING</th>
+                    <th>CGPA / PERCENTAGE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.E Electronics And Communication Engineering</td>
+                    <td><a href="https://www.svce.ac.in/">Sri Venkateswara College of Engineering<div>Sriperumbudur</div></td></a>
+                    <td>2022</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td><a href="http://sskvkanchi.org/">S.S.K.V Matric Higher Secondary School<div>Kanchipuram</div></td></a>
+                    <td>2018</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>SSLC</td>
+                    <td><a href="http://sskvkanchi.org/">S.S.K.V Matric Higher Secondary School<div>Kanchipuram</div></td></a>
+                    <td>2016</td>
+                    <td>97</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="skill-table" id="skills">
+        <table border="1" cellspacing="0">
+            <tr>
+                <td class="col1">Languages Known</td>
+                <td>
+                    <div><span>To Speak</span> : Tamil, English, Hindi</div>
+                    <div><span>To Write</span> : Tamil, English</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">Skill Set</td>
+                <td>
+                    <div><span>Programming Languages</span> : C, C++, Python</div>
+                    <div><span>Microsoft Office</span> : Word, Excel, Powerpoint</div>
+                    <div><span>Areas Of Interest</span> : Embedded systems, Web development, App development</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">Project</td>
+                <td>
+                    <div>Fire Fighting Robot</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">Inplant / Internship Training</td>
+                <td>
+                    <div>1. Inplant Training at Uniq Technologies on Embedded system design</div>
+                    <div>2. Inplant Training at Bharat Electronics ltd., in the department of testing, QM, PA, R&D</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">Industrial Visit</td>
+                <td>
+                    <div>1. ISRO - Satish Dhawan Space Centre(SDSC), Sriharikota for one day</div>
+                    <div>2. Bharat Sanchar Nigam Ltd., chennai for one day</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="profile" id="profile">
+        <p>Date of Birth : 30/10/2000</p>
+        <p>Father's name : T.S.Sivaraman</p>
+        <p>Mother's name : S.Punithavathy</p>
+        <p>Gender : Female</p>
+        <p>Hobbies : Listening Songs, Playing shuttle</p>
+    </div>
+
+    <div class="contact-form" id="contact">
+        <form class="form" onsubmit="getDetails(event)">
+            Name:
+            <input type="text" required placeholder="Enter your name..." id="name"><br>
+            Email ID:
+            <input type="email" required placeholder="Enter your email id..." id="email"><br>
+            Mobile No:
+            <input type="number" required placeholder="Enter your mobile number..." id="phone"><br>
+            Comments:<br><br>
+            <textarea name="textbox" id="text-box" rows="10" column="200">Enter Text here...</textarea><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <script>
+            let details=[];
+            function getDetails(event){
+                event.preventDefault();
+                let detail={};
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+                let phone=document.getElementById("phone").value;
+
+                detail.name=name;
+                detail.email=email;
+                detail.phone=phone;
+
+                details.push(detail);
+
+                document.getElementById("name").value="";
+                document.getElementById("email").value="";
+                document.getElementById("phone").value="";
+                            
+                console.log(details);
+            }
+
+        </script>
+    </div>
+    
+    <div class="links">
+        <div><a href="https://niraimadikpm@gmail.com"><img src="../Images/gmail_icon.png"></a></div>
+        <div><a href=""></a><img src="../Images/insta_icon.jpg"></div>
+        <div><a href="https://www.linkedin.com/in/niraimadi-s-432bb618a"><img src="../Images/linkedin_icon.png"></a></div>
+        <div><a href="https://github.com/Niraimadi"><img src="../Images/github_icon.png"></a></div>
+    </div>
+</body>
+</html>
